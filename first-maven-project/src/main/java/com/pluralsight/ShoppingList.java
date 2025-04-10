@@ -5,3 +5,4 @@ public class ShoppingList {
         System.out.println("ShoppingList: ground meat, onion, oregano, pepper, garlic, flour, tomato, water, yogurt, ice");
 }
 }
+main

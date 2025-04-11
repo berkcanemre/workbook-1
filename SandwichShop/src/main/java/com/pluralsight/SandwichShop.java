@@ -15,12 +15,12 @@ public class SandwichShop {
         int sandwichSize = scanner.nextInt();
         scanner.nextLine();
 
-        double basePrice = 0.0;
+        float basePrice;
 
         if (sandwichSize == 1) {
-            basePrice = 5.45;
+            basePrice = 5.45f;
         } else if (sandwichSize == 2) {
-            basePrice = 8.95;
+            basePrice = 8.95f;
         } else {
             System.out.println("We don't have that size, sorry. Exiting selections are 1 or 2");
             scanner.close();
@@ -33,9 +33,9 @@ public class SandwichShop {
 
         if (loadedAnswer.equals("yes")) {
             if (sandwichSize == 1) {
-                basePrice += 1.00;
+                basePrice += 1.00F;
             } else if (sandwichSize == 2) {
-                basePrice += 1.75;
+                basePrice += 1.75F;
             }
         }
 
@@ -43,17 +43,17 @@ public class SandwichShop {
         System.out.print("May I get you age for your eligibility for discount: ");
         int age = scanner.nextInt();
 
-        double discount = 0.0;
+        float discount = 0.0f;
 
         if (age <= 17) {
-            discount = 0.10; // 10% for students
+            discount = 0.10f; // 10% for students
         } else if (age >= 65) {
-            discount = 0.20; // 20% for seniors
+            discount = 0.20f; // 20% for seniors
         }
 
 //Calculate final price
-        double discountAmount = basePrice * discount;
-        double finalPrice = basePrice - discountAmount;
+        float discountAmount = basePrice * discount;
+        float finalPrice = basePrice - discountAmount;
 
 //Display the cost
         System.out.printf("Your total is: $%.2f\n", finalPrice);
